@@ -24,7 +24,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'mlaursen/vim-react-snippets'
 
 call plug#end()
@@ -49,7 +49,7 @@ nnoremap <silent> <Leader>v :vsplit<CR>
 nnoremap <silent> <Leader>q :close<CR>
 :nnoremap <Leader>w <C-w>
 nnoremap <esc> :noh<return><esc>
-nnoremap <silent> <expr> <leader>f g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
+" nnoremap <silent> <expr> <leader>f g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
 
 
 " color theme
@@ -74,8 +74,8 @@ let g:airline_theme='dracula'
 
 
 " nertree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " coc: GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
