@@ -4,8 +4,6 @@
 " _/ // / / / / /__| |/ / / / / / / /
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
-set number
-set relativenumber
 
 call plug#begin(stdpath('data') . '/plugged')
 
@@ -27,6 +25,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'lifepillar/vim-cheat40'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -35,6 +36,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set number
+set relativenumber
+set smartcase
 
 " remaps
 nnoremap <SPACE> <Nop>
@@ -64,13 +68,6 @@ set termguicolors
 " colorscheme dracula
 " let g:airline_theme='dracula'
 
-" fzf
-nnoremap <silent>; :GFiles<CR>
-nnoremap <silent> <C-p> :Files<CR>
-nnoremap <silent> <C-b> :Buffer<CR>
-nnoremap <C-g> :Rg! 
-
-
 " coc: GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
@@ -83,8 +80,13 @@ nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart
 
-" vim jsx
+" fzf
+nnoremap <silent>; :GFiles<CR>
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-b> :Buffer<CR>
+nnoremap <C-g> :Rg! 
 
+" vim jsx
 "let g:vim_jsx_pretty_template_tags = 1
 "let g:vim_jsx_pretty_highlight_close_t = 1
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
@@ -92,14 +94,13 @@ let g:vim_jsx_pretty_colorful_config = 1 " default 0
 "autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " cheat40
-"let g:cheat40_use_default = 0
+let g:cheat40_use_default = 0
+nnoremap <leader>ch :Cheat40<CR>
 
 
 " sources
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/prettier.vim
-
-
 
 
 
