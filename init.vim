@@ -12,6 +12,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'arcticicestudio/nord-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -24,24 +25,20 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'preservim/nerdtree'
 Plug 'mlaursen/vim-react-snippets'
+Plug 'lifepillar/vim-cheat40'
 
 call plug#end()
 
 " behavior
-
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 
 " remaps
-
 nnoremap <SPACE> <Nop>
 let mapleader = " "
-
-nmap ; :Files<CR>
 nmap <Tab> %
 imap jj <ESC>
 nnoremap <silent> <Leader>s :split<CR>
@@ -49,33 +46,30 @@ nnoremap <silent> <Leader>v :vsplit<CR>
 nnoremap <silent> <Leader>q :close<CR>
 :nnoremap <Leader>w <C-w>
 nnoremap <esc> :noh<return><esc>
-" nnoremap <silent> <expr> <leader>f g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
+:tnoremap <Esc> <C-\><C-n>
 
 
 " color theme
+set encoding=utf-8
 set t_Co=256
 set background=dark
 set cursorline
+colorscheme nord
+let g:airline_theme='nord'
 set number
-let g:dracula_italic = 0
-
-let g:dracular_colorterm = 0
-set termguicolors
-
 syntax enable 
-colorscheme dracula
+set termguicolors
+" let g:dracula_italic = 0
+" let g:dracular_colorterm = 0
+" colorscheme dracula
+" let g:airline_theme='dracula'
 
-set encoding=utf-8
+" fzf
+nnoremap <silent>; :GFiles<CR>
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-b> :Buffer<CR>
+nnoremap <C-g> :Rg! 
 
-
-
-" airline theme
-let g:airline_theme='dracula'
-
-
-" nertree
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " coc: GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
@@ -96,6 +90,9 @@ nnoremap <leader>cr :CocRestart
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
 "autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 "autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+" cheat40
+"let g:cheat40_use_default = 0
 
 
 " sources
