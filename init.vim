@@ -39,6 +39,8 @@ set expandtab
 set number
 set relativenumber
 set smartcase
+set splitright
+set splitbelow
 
 " remaps
 nnoremap <SPACE> <Nop>
