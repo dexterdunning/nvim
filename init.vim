@@ -41,6 +41,7 @@ set relativenumber
 set smartcase
 set splitright
 set splitbelow
+set nowrap
 
 " remaps
 nnoremap <SPACE> <Nop>
