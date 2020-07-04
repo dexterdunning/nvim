@@ -18,7 +18,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'sentientmachine/Pretty-Vim-Python'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'vim-airline/vim-airline'
@@ -66,6 +67,7 @@ let g:airline_theme='nord'
 set number
 syntax enable 
 set termguicolors
+highlight Comment cterm=bold
 " let g:dracula_italic = 0
 " let g:dracular_colorterm = 0
 " colorscheme dracula
