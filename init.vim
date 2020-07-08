@@ -18,7 +18,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
-" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'sentientmachine/Pretty-Vim-Python'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
