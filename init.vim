@@ -10,6 +10,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'skbolton/embark'
 Plug 'arcticicestudio/nord-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
@@ -65,11 +66,15 @@ set cursorline
 set number
 syntax enable 
 set termguicolors
-highlight Comment cterm=bold
-let g:dracula_italic = 0
-let g:dracular_colorterm = 0
-colorscheme dracula
+
+colorscheme embark
+
+" highlight Comment cterm=bold
+" let g:dracula_italic = 0
+" let g:dracular_colorterm = 0
+" colorscheme dracula
 let g:airline_theme='dracula'
+
 " colorscheme nord
 " let g:airline_theme='nord'
 
