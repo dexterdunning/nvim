@@ -59,6 +59,8 @@ nnoremap <esc> :noh<return><esc>
 :tnoremap <Esc> <C-\><C-n>
 nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
+nnoremap <silent>z. zszH<CR>
+nnoremap ' ;
 
 " color theme
 set encoding=utf-8
