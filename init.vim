@@ -44,7 +44,9 @@ set smartcase
 set splitright
 set splitbelow
 set nowrap
+set ignorecase
 set clipboard=unnamedplus
+
 
 " remaps
 nnoremap <SPACE> <Nop>
