@@ -118,6 +118,7 @@ nnoremap <leader>ch :Cheat40<CR>
 " sources
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/prettier.vim
+source $HOME/.config/nvim/plug-config/fugitive.vim
 
 
 
