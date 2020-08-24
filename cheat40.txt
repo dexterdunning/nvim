@@ -252,17 +252,21 @@ Scroll line to the top   zt            N
 Scroll to the bottom     zb            N
 Scroll to the center     zz            N
 }}}
+Folding {{{3
+Fold all                 zM           *N
+Unfold all               zR           *N
+Open a Fold at Cursor    zo           *N
+Open All Folds at Cursor zO           *N
+Fold                     zc           *N
+Unfold                   zv           *N
+Toggle fold              za           *N
+}}}
 Toggle soft-wrapping     :setl wrap!   N
 Page guide at column n   :setl cc=‹n›  N
 No page guide            :setl cc=     N
 Toggle line numbers      :setl nu!     N
 Toggle rel. line numbers :setl rnu!    N
 Toggle invisibles        :setl list!   N
-Fold                     zc           *N
-Unfold                   zv           *N
-Toggle fold              za           *N
-Fold all                 zM            N
-Unfold all               zR            N
 Show files               :ls           N
 Edit… (autocomplete)     :b «Tab»      N
 Edit buffer ‹n›          :b‹n›         N
