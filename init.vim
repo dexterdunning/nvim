@@ -46,6 +46,7 @@ set splitbelow
 set nowrap
 set ignorecase
 set clipboard=unnamedplus
+set foldmethod=indent
 
 
 " remaps
