@@ -55,8 +55,8 @@ nnoremap <SPACE> <Nop>
 let mapleader = " "
 nmap <Tab> %
 imap jj <ESC>
-nnoremap <silent> <Leader>s :split<CR>
-nnoremap <silent> <Leader>v :vsplit<CR>
+nnoremap <silent> <Leader>s :new<CR>
+nnoremap <silent> <Leader>v :vnew<CR>
 nnoremap <silent> <Leader>q :q<CR>
 :nnoremap <Leader>w <C-w>
 nnoremap <esc> :noh<return><esc>
@@ -124,6 +124,7 @@ source $HOME/.config/nvim/plug-config/fugitive.vim
 " layout
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPS='--reverse'
+" let g:fugitive_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 
 
 
