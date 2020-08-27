@@ -1,3 +1,4 @@
+" let g:prettier#config#parser = 'babylon'
 nmap <Leader>p <Plug>(Prettier)
 let g:prettier#autoformat = 0
 let g:prettier#autoformat_require_pragma = 0
