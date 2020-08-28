@@ -34,99 +34,15 @@ Plug 'tpope/vim-commentary'
 
 call plug#end()
 
-" behavior
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set number
-set relativenumber
-set smartcase
-set splitright
-set splitbelow
-set nowrap
-set ignorecase
-set clipboard=unnamedplus
-set foldmethod=indent
+source $HOME/.config/nvim/vim-files/behavior.vim
+source $HOME/.config/nvim/vim-files/remaps.vim
+source $HOME/.config/nvim/vim-files/color.vim
 
-
-" remaps
-nnoremap <SPACE> <Nop>
-let mapleader = " "
-nmap <Tab> %
-imap jj <ESC>
-nnoremap <silent> <Leader>s :new<CR>
-nnoremap <silent> <Leader>v :vnew<CR>
-nnoremap <silent> <Leader>q :q<CR>
-:nnoremap <Leader>w <C-w>
-nnoremap <Leader>w. 10<C-w><
-nnoremap <Leader>w, 10<C-w>>
-nnoremap <esc> :noh<return><esc>
-:tnoremap <Esc> <C-\><C-n>
-nnoremap <leader>o o<esc>
-nnoremap <leader>O O<esc>
-nnoremap <silent>z. zszH<CR>
-nnoremap ' ;
-
-" color theme
-set encoding=utf-8
-set t_Co=256
-set background=dark
-set cursorline
-set number
-syntax enable 
-set termguicolors
-
-colorscheme embark
-
-" highlight Comment cterm=bold
-" let g:dracula_italic = 0
-" let g:dracular_colorterm = 0
-" colorscheme dracula
-let g:airline_theme='dracula'
-
-" colorscheme nord
-" let g:airline_theme='nord'
-
-" coc: GoTo code navigation.
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gr <Plug>(coc-references)
-nmap <leader>rr <Plug>(coc-rename)
-nmap <leader>g[ <Plug>(coc-diagnostic-prev)
-nmap <leader>g] <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
-nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
-nnoremap <leader>cr :CocRestart
-
-" fzf
-nnoremap <silent>; :GFiles<CR>
-nnoremap <silent> <C-p> :Files<CR>
-nnoremap <silent> <C-b> :Buffer<CR>
-nnoremap <C-g> :Rg! 
-
-" vim jsx
-"let g:vim_jsx_pretty_template_tags = 1
-"let g:vim_jsx_pretty_highlight_close_t = 1
-let g:vim_jsx_pretty_colorful_config = 1 " default 0
-"autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-"autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-
-" cheat40
-let g:cheat40_use_default = 0
-nnoremap <leader>ch :Cheat40<CR>
-
-
-" sources
 source $HOME/.config/nvim/plug-config/coc.vim
+source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/prettier.vim
 source $HOME/.config/nvim/plug-config/fugitive.vim
-
-" layout
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-let $FZF_DEFAULT_OPS='--reverse'
-" let g:fugitive_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+source $HOME/.config/nvim/plug-config/cheat40.vim
 
 
 

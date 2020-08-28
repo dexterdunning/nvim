@@ -1,0 +1,13 @@
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set number
+set relativenumber
+set smartcase
+set splitright
+set splitbelow
+set nowrap
+set ignorecase
+set clipboard=unnamedplus
+set foldmethod=indent

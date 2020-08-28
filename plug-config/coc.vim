@@ -1,3 +1,16 @@
+" remaps
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
+nmap <leader>rr <Plug>(coc-rename)
+nmap <leader>g[ <Plug>(coc-diagnostic-prev)
+nmap <leader>g] <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
+nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
+nnoremap <leader>cr :CocRestart
+
+" -----------------------------------------------------------
 let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-actions',
@@ -20,7 +33,8 @@ let g:coc_global_extensions = [
     \ 'coc-yank',
     \ 'coc-json',
     \ 'coc-marketplace',
-    \ 'coc-clangd'
+    \ 'coc-clangd',
+    \ 'coc-java'
     \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -172,3 +186,6 @@ let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump) 
+
+
+
