@@ -1,4 +1,4 @@
-nmap <leader>gs :G<CR>
+nmap <silent><leader>gs :G<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gh :GCheckout<CR>
 nmap <leader>gp :Gpush<CR>
