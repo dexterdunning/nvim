@@ -6,14 +6,12 @@ set number
 syntax enable 
 set termguicolors
 
-colorscheme embark
-
-" highlight Comment cterm=bold
-" let g:dracula_italic = 0
-" let g:dracular_colorterm = 0
-" colorscheme dracula
-let g:airline_theme='dracula'
-
+" colorscheme embark
 " colorscheme nord
-" let g:airline_theme='nord'
+
+colorscheme dracula
+highlight Comment cterm=bold
+let g:dracula_italic = 0
+let g:dracular_colorterm = 0
+
 let g:vim_jsx_pretty_colorful_config = 1 " default 0

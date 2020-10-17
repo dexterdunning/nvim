@@ -14,3 +14,4 @@ nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
 nnoremap <silent>z. zszH<CR>
 nnoremap ' ;
+
