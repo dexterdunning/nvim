@@ -10,8 +10,10 @@ set termguicolors
 " colorscheme nord
 
 colorscheme dracula
-highlight Comment cterm=bold
-let g:dracula_italic = 0
-let g:dracular_colorterm = 0
+" highlight Comment cterm=bold
+" let g:dracula_italic = 0
+" let g:dracular_colorterm = 0
 
-let g:vim_jsx_pretty_colorful_config = 1 " default 0
+colorscheme dracula
+
+" let g:vim_jsx_pretty_colorful_config = 1 " default 0

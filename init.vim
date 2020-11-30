@@ -40,6 +40,9 @@ Plug 'vim-python/python-syntax'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'sentientmachine/Pretty-Vim-Python'
 
+" other
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }
+
 call plug#end()
 
 source $HOME/.config/nvim/vim-files/behavior.vim
