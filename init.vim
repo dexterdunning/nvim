@@ -15,7 +15,6 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'vim-airline/vim-airline'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'lifepillar/vim-cheat40'
 Plug 'tpope/vim-surround'
@@ -23,6 +22,10 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'neovim/nvim-lspconfig'
+Plug 'drzel/vim-scroll-in-place'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'datwaft/bubbly.nvim'
+" Plug 'vim-airline/vim-airline'
 
 " themes
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -56,4 +59,5 @@ source $HOME/.config/nvim/plug-config/fugitive.vim
 source $HOME/.config/nvim/plug-config/cheat40.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/python-syntax.vim
+source $HOME/.config/nvim/plug-config/splitjoin.vim
 
