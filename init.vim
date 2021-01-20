@@ -25,6 +25,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'drzel/vim-scroll-in-place'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'datwaft/bubbly.nvim'
+Plug 'hsanson/vim-android'
 " Plug 'vim-airline/vim-airline'
 
 " themes
@@ -42,9 +43,6 @@ Plug 'vim-python/python-syntax'
 " prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'sentientmachine/Pretty-Vim-Python'
-
-" other
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }
 
 call plug#end()
 
