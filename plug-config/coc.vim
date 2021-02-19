@@ -16,6 +16,7 @@ let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-actions',
     \ 'coc-lists',
+    \ 'coc-clangd',
     \ 'coc-emmet',
     \ 'coc-pairs',
     \ 'coc-tsserver',
@@ -34,7 +35,8 @@ let g:coc_global_extensions = [
     \ 'coc-yank',
     \ 'coc-json',
     \ 'coc-marketplace',
-    \ 'coc-java'
+    \ 'coc-java',
+    \ 'coc-omnisharp'
     \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
