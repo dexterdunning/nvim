@@ -11,9 +11,12 @@ nnoremap <Leader>w. 10<C-w><
 nnoremap <Leader>w, 10<C-w>>
 nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
-nnoremap <silent>z. zszH<CR>
+nnoremap <silent>z. zszH
 nnoremap ' ;
 
 " terminal escape remap
 tnoremap jj <C-\><C-n>
 
+" paragraph editing
+nnoremap <A-j> gj
+nnoremap <A-k> gk

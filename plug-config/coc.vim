@@ -12,6 +12,7 @@ nnoremap <leader>cr :CocRestart
 nnoremap <silent> <leader>e :CocCommand explorer<CR>
 
 " -----------------------------------------------------------
+
 let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-actions',

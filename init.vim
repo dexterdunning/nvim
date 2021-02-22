@@ -26,6 +26,7 @@ Plug 'drzel/vim-scroll-in-place'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'datwaft/bubbly.nvim'
 Plug 'hsanson/vim-android'
+Plug 'OmniSharp/omnisharp-vim'
 " Plug 'vim-airline/vim-airline'
 
 " themes
@@ -58,4 +59,5 @@ source $HOME/.config/nvim/plug-config/cheat40.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/python-syntax.vim
 source $HOME/.config/nvim/plug-config/splitjoin.vim
+source $HOME/.config/nvim/plug-config/format.vim
 

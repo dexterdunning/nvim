@@ -13,6 +13,7 @@ set nowrap
 set ignorecase
 set clipboard=unnamedplus
 set foldmethod=syntax
+set autoread
 
 " lua << EOF
 " require'nvim_lsp'.ccls.setup{}
