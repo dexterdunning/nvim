@@ -14,7 +14,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'mlaursen/vim-react-snippets'
 Plug 'lifepillar/vim-cheat40'
 Plug 'tpope/vim-surround'
@@ -28,6 +28,8 @@ Plug 'datwaft/bubbly.nvim'
 Plug 'hsanson/vim-android'
 Plug 'OmniSharp/omnisharp-vim'
 " Plug 'vim-airline/vim-airline'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'simplenote-vim/simplenote.vim'
 
 " themes
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -40,9 +42,11 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-python/python-syntax'
+Plug 'sheerun/vim-polyglot'
+Plug 'OrangeT/vim-csharp'
 
 " prettier
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'sentientmachine/Pretty-Vim-Python'
 
 call plug#end()
@@ -60,4 +64,15 @@ source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/python-syntax.vim
 source $HOME/.config/nvim/plug-config/splitjoin.vim
 source $HOME/.config/nvim/plug-config/format.vim
+source $HOME/.config/nvim/plug-config/markdown.vim
 
+" omnisharp
+" let g:OmniSharp_server_path = '/home/dexter/omnisharp/run'
+let g:OmniSharp_server_stdio = 1
+let g:OmniSharp_server_use_mono = 1
+
+" simplenote vim
+let g:SimplenoteUsername = "dunningdexter@gmail.com"
+let g:SimplenotePassword = "34erft34"
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
