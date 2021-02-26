@@ -1,7 +1,6 @@
 au FocusGained,BufEnter * :checktime
 function! Formatonsave()
-    " execute ':w'
-    let fileName = expand('%:t')
+    let fileName = expand('%:p')
     execute ':!clang-format -i ' . fileName
     execute ':e!'
 endfunction
