@@ -3,10 +3,10 @@ let mapleader = " "
 
 nmap <Tab> %
 imap jj <ESC>
-nnoremap <silent> <Leader>s :new<CR>
-nnoremap <silent> <Leader>v :vnew<CR>
-nnoremap <silent> <Leader>q :q<CR>
-:nnoremap <Leader>w <C-w>
+noremap <silent> <Leader>h :new<CR>
+noremap <silent> <Leader>v :vnew<CR>
+noremap <silent> <Leader>q :q<CR>
+nnoremap <Leader>w <C-w>
 nnoremap <Leader>w. 10<C-w><
 nnoremap <Leader>w, 10<C-w>>
 nnoremap <leader>o o<esc>

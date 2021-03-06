@@ -11,6 +11,8 @@ nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart
 nnoremap <silent> <leader>e :CocCommand explorer<CR>
 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 " -----------------------------------------------------------
 
 let g:coc_global_extensions = [
