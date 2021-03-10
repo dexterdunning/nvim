@@ -25,9 +25,6 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
-" Plug 'stsewd/fzf-checkout.vim'
 
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
@@ -41,7 +38,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'sentientmachine/Pretty-Vim-Python'
 
 " status line
-" Plug 'datwaft/bubbly.nvim'
 Plug 'vim-airline/vim-airline'
 
 " themes
