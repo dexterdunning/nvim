@@ -31,7 +31,6 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-Plug 'neovim/nvim-lspconfig'
 
 " language specific
 Plug 'leafgarland/typescript-vim'
