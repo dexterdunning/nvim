@@ -26,8 +26,12 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-" autocomplete
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+" lsp / autocomplete
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'anott03/nvim-lspinstall'
+Plug 'alexaandru/nvim-lspupdate'
+" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 " language specific
 Plug 'leafgarland/typescript-vim'
@@ -46,12 +50,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/limelight.vim'
 
 " syntax highlight
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'pangloss/vim-javascript'
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'vim-python/python-syntax'
-Plug 'sheerun/vim-polyglot'
-Plug 'OrangeT/vim-csharp'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+" Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'pangloss/vim-javascript'
+" Plug 'octol/vim-cpp-enhanced-highlight'
+" Plug 'vim-python/python-syntax'
+" Plug 'sheerun/vim-polyglot'
+" Plug 'OrangeT/vim-csharp'
 
 " prettier
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -62,8 +67,7 @@ source $HOME/.config/nvim/vim-files/behavior.vim
 source $HOME/.config/nvim/vim-files/remaps.vim
 source $HOME/.config/nvim/vim-files/color.vim
 
-source $HOME/.config/nvim/plug-config/coc.vim
-" source $HOME/.config/nvim/plug-config/fzf.vim
+" source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/prettier.vim
 source $HOME/.config/nvim/plug-config/fugitive.vim
 source $HOME/.config/nvim/plug-config/cheat40.vim
@@ -72,7 +76,33 @@ source $HOME/.config/nvim/plug-config/python-syntax.vim
 source $HOME/.config/nvim/plug-config/splitjoin.vim
 source $HOME/.config/nvim/plug-config/format.vim
 source $HOME/.config/nvim/plug-config/markdown.vim
-source $HOME/.config/nvim/plug-config/omnisharp.vim
 source $HOME/.config/nvim/plug-config/simplenote.vim
+source $HOME/.config/nvim/plug-config/omnisharp.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 
+
+lua require('lsp-config')
+
+set completeopt=menuone,noinsert,noselect
+let g:completion_matching_strategy_list = [ 'exact', 'substring', 'fuzzy' ]
+
+lua require('lspconfig').ccls.setup { on_attach=require'completion'.on_attach }
+lua require('lspconfig').clangd.setup { on_attach=require'completion'.on_attach }
+lua require('lspconfig').omnisharp.setup { on_attach=require'completion'.on_attach }
+lua require('lspconfig').pyls.setup { on_attach=require'completion'.on_attach }
+
+autocmd BufEnter * lua require'completion'.on_attach()
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true,
+  }
+}
+EOF
+
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
