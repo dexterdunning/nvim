@@ -19,6 +19,7 @@ Plug 'drzel/vim-scroll-in-place'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'simplenote-vim/simplenote.vim'
 Plug 'farmergreg/vim-lastplace'
+Plug 'unblevable/quick-scope' 
 
 " fuzzy finding
 Plug 'nvim-lua/popup.nvim'
@@ -70,6 +71,7 @@ source $HOME/.config/nvim/plug-config/markdown.vim
 source $HOME/.config/nvim/plug-config/simplenote.vim
 source $HOME/.config/nvim/plug-config/omnisharp.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
+" source $HOME/.config/nvim/plug-config/quickscope.vim
 
 lua require('lsp-config')
 lua require('ts-config')
