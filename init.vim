@@ -51,15 +51,6 @@ Plug 'junegunn/limelight.vim'
 
 " syntax highlight
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-" Plug 'maxmellon/vim-jsx-pretty'
-" Plug 'pangloss/vim-javascript'
-" Plug 'octol/vim-cpp-enhanced-highlight'
-" Plug 'vim-python/python-syntax'
-" Plug 'sheerun/vim-polyglot'
-" Plug 'OrangeT/vim-csharp'
-
-" prettier
-" Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call plug#end()
 
@@ -80,29 +71,6 @@ source $HOME/.config/nvim/plug-config/simplenote.vim
 source $HOME/.config/nvim/plug-config/omnisharp.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 
-
 lua require('lsp-config')
-
-set completeopt=menuone,noinsert,noselect
-let g:completion_matching_strategy_list = [ 'exact', 'substring', 'fuzzy' ]
-
-lua require('lspconfig').ccls.setup { on_attach=require'completion'.on_attach }
-lua require('lspconfig').clangd.setup { on_attach=require'completion'.on_attach }
-lua require('lspconfig').omnisharp.setup { on_attach=require'completion'.on_attach }
-lua require('lspconfig').pyls.setup { on_attach=require'completion'.on_attach }
-
-autocmd BufEnter * lua require'completion'.on_attach()
-
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-  },
-  indent = {
-    enable = true,
-  }
-}
-EOF
-
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+lua require('ts-config')
+source $HOME/.config/nvim/plug-config/lsp.vim
