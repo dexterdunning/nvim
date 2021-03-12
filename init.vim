@@ -21,17 +21,24 @@ Plug 'simplenote-vim/simplenote.vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'unblevable/quick-scope' 
 
-" fuzzy finding
+" fuzzy finding 
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" file navigation
+Plug 'preservim/nerdtree'
 
 " lsp / autocomplete
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'anott03/nvim-lspinstall'
 Plug 'alexaandru/nvim-lspupdate'
+Plug 'norcalli/snippets.nvim'
 " Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 " language specific
@@ -71,6 +78,7 @@ source $HOME/.config/nvim/plug-config/markdown.vim
 source $HOME/.config/nvim/plug-config/simplenote.vim
 source $HOME/.config/nvim/plug-config/omnisharp.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
+source $HOME/.config/nvim/plug-config/nerdtree.vim
 " source $HOME/.config/nvim/plug-config/quickscope.vim
 
 lua require('lsp-config')
