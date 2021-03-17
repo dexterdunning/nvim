@@ -35,16 +35,14 @@ Plug 'preservim/nerdtree'
 
 " lsp / autocomplete
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
 Plug 'anott03/nvim-lspinstall'
 Plug 'alexaandru/nvim-lspupdate'
-Plug 'norcalli/snippets.nvim'
-" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'hrsh7th/nvim-compe'
+Plug 'hrsh7th/vim-vsnip'
 
 " language specific
 Plug 'leafgarland/typescript-vim'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'hsanson/vim-android'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'sentientmachine/Pretty-Vim-Python'
@@ -66,7 +64,6 @@ source $HOME/.config/nvim/vim-files/behavior.vim
 source $HOME/.config/nvim/vim-files/remaps.vim
 source $HOME/.config/nvim/vim-files/color.vim
 
-" source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/prettier.vim
 source $HOME/.config/nvim/plug-config/fugitive.vim
 source $HOME/.config/nvim/plug-config/cheat40.vim
@@ -79,8 +76,9 @@ source $HOME/.config/nvim/plug-config/simplenote.vim
 source $HOME/.config/nvim/plug-config/omnisharp.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/nerdtree.vim
+source $HOME/.config/nvim/plug-config/commentary.vim
 " source $HOME/.config/nvim/plug-config/quickscope.vim
 
 lua require('lsp-config')
-lua require('ts-config')
+" lua require('ts-config')
 source $HOME/.config/nvim/plug-config/lsp.vim
