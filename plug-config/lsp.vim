@@ -21,5 +21,3 @@ inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 highlight link CompeDocumentation NormalFloat
 
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()

@@ -12,16 +12,8 @@ set splitbelow
 set nowrap
 set ignorecase
 set clipboard=unnamedplus
-set foldmethod=syntax
 set autoread
 
-" lua << EOF
-" require'nvim_lsp'.ccls.setup{}
-
-"   Commands:
-  
-"   Default Values:
-"     cmd = { "ccls" }
-"     filetypes = { "c", "cpp", "objc", "objcpp" }
-"     root_dir = root_pattern("compile_commands.json", "compile_flags.txt", ".git")
-" EOF
+" set foldmethod=syntax
+" set foldmethod=expr
+" set foldexpr=nvim_treesitter#foldexpr()

@@ -20,18 +20,19 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'simplenote-vim/simplenote.vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'unblevable/quick-scope' 
+Plug 'psliwka/vim-smoothie'
 
 " fuzzy finding 
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " file navigation
-Plug 'preservim/nerdtree'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " lsp / autocomplete
 Plug 'neovim/nvim-lspconfig'
@@ -39,24 +40,24 @@ Plug 'anott03/nvim-lspinstall'
 Plug 'alexaandru/nvim-lspupdate'
 Plug 'hrsh7th/nvim-compe'
 Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'honza/vim-snippets'
+
+" syntax highlight
+Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master', 'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 " language specific
-Plug 'leafgarland/typescript-vim'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'mlaursen/vim-react-snippets'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'sentientmachine/Pretty-Vim-Python'
 
 " status line
-Plug 'vim-airline/vim-airline'
+Plug 'glepnir/galaxyline.nvim'
+Plug 'romgrk/barbar.nvim'
 
 " themes
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/limelight.vim'
-
-" syntax highlight
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 call plug#end()
 
@@ -64,10 +65,8 @@ source $HOME/.config/nvim/vim-files/behavior.vim
 source $HOME/.config/nvim/vim-files/remaps.vim
 source $HOME/.config/nvim/vim-files/color.vim
 
-source $HOME/.config/nvim/plug-config/prettier.vim
 source $HOME/.config/nvim/plug-config/fugitive.vim
 source $HOME/.config/nvim/plug-config/cheat40.vim
-source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/python-syntax.vim
 source $HOME/.config/nvim/plug-config/splitjoin.vim
 source $HOME/.config/nvim/plug-config/format.vim
@@ -75,10 +74,12 @@ source $HOME/.config/nvim/plug-config/markdown.vim
 source $HOME/.config/nvim/plug-config/simplenote.vim
 source $HOME/.config/nvim/plug-config/omnisharp.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
-source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/commentary.vim
-" source $HOME/.config/nvim/plug-config/quickscope.vim
+source $HOME/.config/nvim/plug-config/nvim-tree.vim
 
+" lua require('quickscope')
 lua require('lsp-config')
-" lua require('ts-config')
+lua require('ts-config')
+lua require('galaxyline-config')
+lua require('barbar-config')
 source $HOME/.config/nvim/plug-config/lsp.vim
